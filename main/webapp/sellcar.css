@@ -1,0 +1,213 @@
+/* Modern color palette and base styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    color: #333;
+    min-height: 100vh;
+}
+
+.header {
+    background: linear-gradient(90deg, #4b1248, #2c2c54);
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+/* Sell car container */
+.sell-car-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Box styling */
+.box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.box-content {
+    padding: 2rem;
+}
+
+/* Flex container */
+.flex-container {
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+}
+
+/* Image upload section */
+.image {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    transition: border-color 0.3s ease;
+}
+
+.image:hover {
+    border-color: #00adb5;
+}
+
+.image input[type="file"] {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 12px;
+    width: 100%;
+    margin-top: 1rem;
+    cursor: pointer;
+    border: none;
+    color: white;
+}
+
+/* Details section */
+.details {
+    flex: 1;
+}
+
+.input-txt {
+    margin-bottom: 1.5rem;
+}
+
+.input-txt strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #00adb5;
+    font-size: 1.1rem;
+}
+
+.input-field input,
+.input-field textarea {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.input-field input:focus,
+.input-field textarea:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.02);
+}
+
+.input-field textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Button styling */
+.button-container {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.sell-button {
+    background: linear-gradient(45deg, #00adb5, #3f72af);
+    color: white;
+    border: none;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.sell-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 173, 181, 0.4);
+}
+
+.sell-button:active {
+    transform: translateY(-1px);
+}
+
+/* Form validation styling */
+.input-field input:invalid,
+.input-field textarea:invalid {
+    border: 1px
+    
+    /* Add this to your existing CSS */
+
+/* Animation for the button */
+.sell-button {
+    background: linear-gradient(45deg, #00adb5, #3f72af);
+    color: white;
+    border: none;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 1px;
+    position: relative; /* For the animation effect */
+}
+
+.sell-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 173, 181, 0.4);
+}
+
+.sell-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    transition: transform 0.3s ease;
+    z-index: -1; /* Send it behind the button */
+}
+
+.sell-button:hover::after {
+    transform: scale(1.1); /* Scale effect on hover */
+}
+
+/* Fade-in animation for form elements */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.box {
+    animation: fadeIn 0.5s ease-out; /* Apply fade-in animation */
+}

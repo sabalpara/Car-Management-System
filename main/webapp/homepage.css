@@ -1,0 +1,247 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  color: #000000;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+  color: #000000;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #C2D515;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+  height: 50px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #FFFFFF;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #D6D6D6;
+  animation: slideIn 1s ease-in-out;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 2.5em;
+  margin: 0;
+  color: #000000; /* Dark black color */
+  font-weight: bold; /* Bold font */
+}
+
+
+.hero-text p {
+  font-size: 1.2em;
+  color: #000000;
+}
+
+.hero-image img {
+  max-width: 400px;
+  border-radius: 10px;
+  animation: scaleUp 1s ease-in-out;
+}
+
+.categories {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #FFFFFF;
+}
+
+.categories h2 {
+  color: #000000; /* Dark black color */
+  font-weight: bold; /* Bold font */
+
+  margin-bottom: 20px;
+}
+
+.category-buttons button {
+  margin: 5px;
+  padding: 10px 15px;
+  background-color: #C2D515;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.category-buttons button:hover {
+  background-color: #AEBF12;
+  transform: scale(1.1);
+}
+
+.car-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.car-card {
+  background-color: #D6D6D6;
+  border: 1px solid #C2D515;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.car-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.car-card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.buy-now {
+  background-color: #C2D515;
+  color: #000000;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.buy-now:hover {
+  background-color: #AEBF12;
+  transform: scale(1.05);
+}
+
+.car-service, .feedback {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #F9F9F9;
+  width: 80%; /* Reduced width */
+  margin: 20px auto; /* Centered the boxes */
+  border: 1px solid #C2D515;
+  border-radius: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+#hi {
+  height: 80px; /* Reduced height */
+  width: 70%; /* Adjusted width */
+  margin: 15px auto;
+  text-align: center;
+  border: 1px solid #C2D515;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#hey {
+  background-color: #C2D515;
+  color: #000000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#hey:hover {
+  background-color: #AEBF12;
+}
+
+.rea, .feed {
+  width: 500px; /* Reduced width */
+  height: 40%; /* Adjusted height */
+  border: 1px solid #C2D515;
+  border-radius: 15px;
+  margin: auto;
+}
+
+.uparle {
+  margin-top: 20px;
+}
+
+
+footer {
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer h2.op {
+  color: #C2D515;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
